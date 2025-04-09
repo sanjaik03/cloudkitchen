@@ -1,0 +1,118 @@
+.food-item-img-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 3px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #fff, #f8f8f8);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.food-item-img-container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+.food-item-image {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.food-item-img-container:hover .food-item-image {
+    transform: scale(1.07);
+    opacity: 0.95;
+}
+
+/* Add Button */
+.food-item-img-container .add {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.food-item-img-container .add:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+/* Counter Box - Glassmorphism Effect */
+.food-item-counter {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    padding: 8px 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.food-item-counter:hover {
+    transform: scale(1.05);
+}
+
+/* Counter Buttons */
+.food-item-counter img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.food-item-counter img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* Counter Text */
+.food-item-counter p {
+    margin: 0 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .food-item-img-container {
+        height: 180px;
+    }
+
+    .food-item-image {
+        width: 85%;
+        height: 85%;
+    }
+
+    .food-item-counter {
+        padding: 6px 12px;
+    }
+
+    .food-item-counter img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .food-item-counter p {
+        font-size: 1rem;
+    }
+}

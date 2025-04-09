@@ -1,0 +1,70 @@
+/* Food Display Container */
+.food-display {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #fbf9f9, #f0eeee);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Section Title */
+.food-display h2 {
+    font-size: 2rem;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Underline Effect */
+.food-display h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #ff7f50;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Food Items Grid */
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Food Item Card */
+.food-item {
+    background: rgba(205, 88, 88, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.food-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    border-color: #ff7f50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .food-display-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .food-display h2 {
+        font-size: 5rem;
+    }
+}

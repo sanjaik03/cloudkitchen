@@ -1,0 +1,158 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cloud Kitchen Brand (Left) */
+.navbar-brand {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+}
+
+/* Centered Navbar Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Navbar Menu Links */
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  position: relative;
+  padding: 5px 10px;
+}
+
+/* Hover Effect - Color Change & Underline */
+.navbar-menu li a:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* Underline Effect */
+.navbar-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc00;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Admin Login Button (Right) */
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Basket Icon with Notification Dot */
+.navbar-search-icon {
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* Login/Logout Button */
+.admin-login {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 3px 10px rgba(255, 204, 0, 0.3);
+}
+
+.admin-login:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}
+
+.admin-login:active {
+  transform: scale(0.95);
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 750px) {
+  /* Hiding menu on mobile */
+  .navbar-menu {
+      display: none;
+  }
+
+  /* Show a mobile-friendly menu button (hamburger) or other icon if needed */
+  .navbar-right {
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  }
+
+  /* Optionally, you can add a hamburger icon here */
+  .navbar-right .hamburger {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+  }
+}

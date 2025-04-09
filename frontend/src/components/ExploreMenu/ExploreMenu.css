@@ -1,0 +1,115 @@
+.explore-menu {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+    border-radius: 12px;
+}
+
+/* Heading Styling */
+.explore-menu h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Description Text */
+.explore-menu-text {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Menu List Container - Switched to Grid for Better Alignment */
+.explore-menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Menu List Items */
+.explore-menu-list-item {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    width: 180px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+/* Active state for selected category */
+.explore-menu-list-item.active {
+    border-color: #ff7f50;
+    background-color: #fff9f5;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects */
+.explore-menu-list-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    border-color: #ff7f50;
+}
+
+/* Item Image */
+.explore-menu-list-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover */
+.explore-menu-list-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Text Under Each Item */
+.explore-menu-list-item p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .explore-menu-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    .explore-menu-list-item {
+        width: 150px;
+        height: 200px;
+    }
+    .explore-menu-list-item img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .explore-menu-text{
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
